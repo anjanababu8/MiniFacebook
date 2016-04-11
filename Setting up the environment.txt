@@ -3,3 +3,16 @@ https://getcomposer.org/download/
 
 Installing Laravel using composer
 video : https://www.youtube.com/watch?v=JHE7ZsVRc_U
+
+Cloud9 tips
+..........Unzipping a file
+#/bin/sh
+for file in *.zip
+do
+unzip -P pcp9100 "$file"  
+done
+
+.......Phpmyadmin 
+mysql-ctl start
+phpmyadmin-ctl install
+https://minifacebook---hehehe.c9users.io/phpmyadmin/
