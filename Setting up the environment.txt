@@ -1,0 +1,5 @@
+Installing Composer
+https://getcomposer.org/download/
+
+Installing Laravel using composer
+video : https://www.youtube.com/watch?v=JHE7ZsVRc_U
