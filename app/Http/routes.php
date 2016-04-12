@@ -11,10 +11,15 @@
 |
 */
 
-Route::get('welcome',[
+Route::get('/',[
 	'uses' => '\App\Http\Controllers\WelcomeController@index',
 	'as'=>'welcome']
 	);
+
+Route::get('welcome',[
+	'uses' => '\App\Http\Controllers\WelcomeController@index',
+	'as'=>'welcome']
+	);	
 
 Route::get('home', [
 	'uses' => '\App\Http\Controllers\HomeController@index',
@@ -26,10 +31,6 @@ Route::get('alert', function(){
 });
 
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
 
 /** Authentication **/
 Route::get('/signup',[
