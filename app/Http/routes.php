@@ -11,16 +11,20 @@
 |
 */
 
-Route::get('/',[
+Route::get('welcome',[
 	'uses' => '\App\Http\Controllers\WelcomeController@index',
 	'as'=>'welcome']
+	);
+
+Route::get('home', [
+	'uses' => '\App\Http\Controllers\HomeController@index',
+	'as'=>'home']
 	);
 	
 Route::get('alert', function(){
 	return redirect()->route('welcome')->with('info','You have signed in successfully!');
 });
 
-Route::get('home', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -32,3 +36,9 @@ Route::get('/signup',[
 	'uses' => '\App\Http\Controllers\AuthController@getSignUp',
 	'as'=>'auth.signup'
 	]);
+	
+Route::post('/signup',[
+	'uses' => '\App\Http\Controllers\AuthController@postSignUp',
+	]);
+	
+	
