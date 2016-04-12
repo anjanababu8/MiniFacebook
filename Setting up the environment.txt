@@ -16,3 +16,6 @@ done
 mysql-ctl start
 phpmyadmin-ctl install
 https://minifacebook---hehehe.c9users.io/phpmyadmin/
+
+Laravel commands
+php artisan make:migration create_users

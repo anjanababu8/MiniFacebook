@@ -11,7 +11,14 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/',[
+	'uses' => '\App\Http\Controllers\WelcomeController@index',
+	'as'=>'welcome']
+	);
+	
+Route::get('alert', function(){
+	return redirect()->route('welcome')->with('info','You have signed in successfully!');
+});
 
 Route::get('home', 'HomeController@index');
 
@@ -19,3 +26,9 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+/** Authentication **/
+Route::get('/signup',[
+	'uses' => '\App\Http\Controllers\AuthController@getSignUp',
+	'as'=>'auth.signup'
+	]);
