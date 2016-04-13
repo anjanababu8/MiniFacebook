@@ -35,11 +35,29 @@ Route::get('alert', function(){
 /** Authentication **/
 Route::get('/signup',[
 	'uses' => '\App\Http\Controllers\AuthController@getSignUp',
-	'as'=>'auth.signup'
+	'as'=>'auth.signup',
+	'middleware' => ['guest']
 	]);
 	
 Route::post('/signup',[
 	'uses' => '\App\Http\Controllers\AuthController@postSignUp',
+	'middleware' => ['guest'],
 	]);
 	
+Route::get('/signin',[
+	'uses' => '\App\Http\Controllers\AuthController@getSignIn',
+	'as'=>'auth.signin',
+	'middleware' => ['guest']
+	]);
+	
+Route::post('/signin',[
+	'uses' => '\App\Http\Controllers\AuthController@postSignIn',
+	'middleware' => ['guest']
+	]);
+	
+Route::get('/signout',[
+	'uses' => '\App\Http\Controllers\AuthController@getSignOut',
+	'as' => 'auth.signout'
+	]);
+		
 	
