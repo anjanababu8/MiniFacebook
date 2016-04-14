@@ -19,3 +19,8 @@ https://minifacebook---hehehe.c9users.io/phpmyadmin/
 
 Laravel commands
 php artisan make:migration create_users
+
+Features implemented
+1. Sign Up
+2. Sign In 
+3. Sign Out
